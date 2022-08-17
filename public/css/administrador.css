@@ -1,0 +1,133 @@
+body{
+    height: auto;
+}
+
+
+form div{
+    margin-top: 60px;
+}
+
+.bi{
+    width: 50px;
+    height: 30px;
+}
+
+.administrador-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 750px;
+}
+
+.administrador-container > div{
+    padding: 20px;
+    
+}
+
+.izquierda {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    height: 600px;
+}
+
+.izquierda h2{
+    font-size: 1.8rem;
+}
+
+.izquierda label{
+    font-size: 1.2rem;
+}
+
+.izquierda input{
+    font-size: 1.2rem;
+}
+
+.btn-agregar{
+    font-size: 1.5rem;
+    width: 130px;
+}
+
+
+.derecha {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 600px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 65%;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.derecha::-webkit-scrollbar {
+    -webkit-appearance: none;
+    
+}
+
+.derecha::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.derecha::-webkit-scrollbar-button:increment,.derecha::-webkit-scrollbar-button {
+    display: none;
+} 
+
+
+.derecha::-webkit-scrollbar-thumb {
+    background-color: #02b4cc;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.derecha::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+/* * * * * * * * * * * * * * * * * * * * */
+
+td, th{
+    line-height: 40px;
+}
+
+.btn-delete{
+    font-size: 0.7em;
+}
+
+@media screen and (orientation: portrait){
+
+    .administrador-container{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: 1400px;
+        padding: 20px;
+    }
+
+    .administrador-container > div{
+            width: 100%;
+    }
+
+    thead th{
+        max-width: 72px;
+        overflow: hidden;
+    }
+
+    .derecha{
+        height: auto;
+        max-height: 600px;
+    }
+    .izquierda{
+        margin-top: 20px;
+    }
+    .main{
+        height: auto;
+    }
+
+}

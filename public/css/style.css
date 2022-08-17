@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+}
+
+
+body {
+  min-height: 1000px;
+  background-color: rgb(245, 245, 245);
+}
+
+.font-white {
+  color: white;
+}
+
+.navbar {
+  position: absolute;
+  background: -webkit-linear-gradient(to right,
+      #5bcebf,
+      #5bcebf,
+      #69d2e7,
+      #2e97b7);
+  background: linear-gradient(to right, #5bcebf, #5bcebf, #69d2e7, #2e97b7);
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  height: 96px;
+}
+
+.navbar img {
+  width: 80px;
+}
+
+.navbar-text {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color: white;
+}
+
+.navbar-text h3 {
+  font-size: 160%;
+  margin: 0;
+}
+
+.navbar-text h5 {
+  font-size: 120%;
+  margin: 0;
+}
+
+.navbar .btn-back{
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.navbar .btn-back:hover{
+  color: aliceblue;
+}
+
+.main {
+  overflow: hidden;
+  /*contenedor principal, no le llame container porque bootstrap le pone estilos*/
+  width: 85%;
+  margin: auto;
+  height: 900px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.219) 0px 1px 4px;
+  border-radius: 5px;
+  padding-top: 100px;
+}
+
+@media screen and (orientation: portrait){
+
+  .btn-back, .navbar{
+    position: fixed!important;
+    z-index: 20;
+  }
+
+
+
+  body {
+    min-height: 1100px;
+    background-color: white;
+  }
+
+  .main{
+    box-shadow: none;
+    width: 100%;
+    height: 1800px;
+  }
+
+
+}

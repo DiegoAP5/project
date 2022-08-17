@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/resources/images/logo-ico.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="/resources/css/agregar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+
+    <div class="main">
+
+        <nav class="navbar">
+            <a class="btn-back" href="/"><i class="bi bi-arrow-left-square"></i></a>
+            <img src="/resources/images/logo-nav.png" alt="logo">
+            <div class="navbar-text">
+                <h3><strong>Veterinaria</strong></h3>
+                <h5>Los ingenieros</h5>
+            </div>
+        </nav>
+
+        <form action="/addpet" method="post">
+        <div class="agregar-container">
+            <div class="mascota-container">
+            
+                
+                    <h3>Mascota</h3>
+                    <div class="mb-2">
+                        <label for="especie" class="form-label">Especie</label>
+                        <input type="text" class="form-control" id="especie" name="especie" required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="raza" class="form-label">Raza</label>
+                        <input type="text" class="form-control" id="raza" name="raza" placeholder="Ingrese raza" required="" />
+                    </div>
+                    <div class="mb-2">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="mnombre" name="mnombre" placeholder="" required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="edad" class="form-label">Edad</label>
+                        <input type="text" class="form-control" id="edad" name="edad" placeholder="" required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="adicional" class="form-label">Informacion adicional</label>
+                        <input type="text" class="form-control" id="adicional" name="adicional"required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="fecha_entrada" class="form-label">Fecha de entrada</label>
+                        <input type="date" class="form-control" id="entrada" name="entrada"required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="hora" class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="hora" name="hora"required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="fecha_salida" class="form-label">Fecha de salida</label>
+                        <input type="date" class="form-control" id="salida" name="salida"required />
+                    </div>
+                    
+                </div>
+                <div class="dueno-container">
+                    <div class="mb-2">
+                        <label for="dnombre" class="form-label">Nombre del dueño</label>
+                        <input type="text" class="form-control" id="dnombre" name="dnombre" required placeholder="" />
+                    </div>
+                    <div class="mb-2">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono" required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="direccion" class="form-label">Direccion</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" required />
+                    </div>
+                </div>
+
+                <button class="btn-agregar btn btn-primary btn-outline-white btn-lg px-5" type="submit">Agregar</button>
+           
+        </div>
+    </form>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <% if(typeof alert !="undefined" ) { %>
+    <script>
+      Swal.fire({
+        title: '<%= alertTitle %>',
+        text: '<%= alertMessage %>',
+        icon: '<%= alertIcon %>',
+        showConfirmButton: <%= showConfirmButton %>,
+        timer: <%= timer %>
+            }).then(() => {
+          window.location = '/<%= ruta %>'
+        })
+    </script>
+    <% } %>
+</body>
+
+</html>

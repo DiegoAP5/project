@@ -1,0 +1,21 @@
+body{
+    height: auto;
+}
+
+
+.agregar-container{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+
+.btn-agregar{
+    position: absolute;
+    top: 100%;
+}
